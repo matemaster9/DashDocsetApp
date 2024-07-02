@@ -22,6 +22,8 @@ public class DashDocsetDirConfigProperties {
 
 	public static final String prefix = "dash-docset";
 
+	private final String userDir = SystemProperties.getUserDir();
+
 	private String docsetStorePath;
 
 	private String webJarTempStorePath;
@@ -32,8 +34,6 @@ public class DashDocsetDirConfigProperties {
 
 	@Getter
 	private Boolean enablePublishWebJarDownloadSuccessEvent;
-
-	private final String userDir = SystemProperties.getUserDir();
 
 	public String getDocsetStorePath() {
 		return userDir + docsetStorePath;
