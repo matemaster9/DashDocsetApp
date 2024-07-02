@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: DashDocsetApp
+
+dash-docset:
+  web-jar-temp-store-path: /app/temp
+  docset-store-path: /app/docset
+  javadocset-tool: /app/bin/javadocset
+  zsh-working-dir: /app/temp
+  enable-publish-web-jar-download-success-event: on
+
+server:
+  port: 8090
