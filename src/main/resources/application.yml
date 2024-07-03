@@ -11,3 +11,15 @@ dash-docset:
 
 server:
   port: 8090
+
+springdoc:
+  api-docs:
+    enabled: on
+    version: openapi_3_1
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    supported-submit-methods: get, post
+    tags-sorter: alpha
+    operations-sorter: alpha
+  packages-to-scan: org.metanoia.dashdocsetapp

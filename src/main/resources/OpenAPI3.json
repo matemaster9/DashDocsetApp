@@ -1,0 +1,129 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "OpenAPI definition",
+    "version": "v0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8090",
+      "description": "Generated server url"
+    }
+  ],
+  "tags": [
+    {
+      "name": "DashDocsetController",
+      "description": "docset生成转化"
+    }
+  ],
+  "paths": {
+    "/dash/download-docset": {
+      "post": {
+        "tags": [
+          "DashDocsetController"
+        ],
+        "summary": "downloadDocset",
+        "description": "下载服务器本地的docset",
+        "operationId": "downloadDocset",
+        "parameters": [
+          {
+            "name": "docset",
+            "in": "query",
+            "description": "docset名称",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "deprecated": true
+      }
+    },
+    "/dash/convert-web-jar-to-dash-docset": {
+      "post": {
+        "tags": [
+          "DashDocsetController"
+        ],
+        "summary": "convertWebJarToDashDocset",
+        "description": "同步转化jar成docset到响应流",
+        "operationId": "convertWebJarToDashDocset",
+        "parameters": [
+          {
+            "name": "webjar",
+            "in": "query",
+            "description": "jar的下载链接地址",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/dash/batch-auto-convert-jar-to-dash-docset": {
+      "post": {
+        "tags": [
+          "DashDocsetController"
+        ],
+        "summary": "batchAutoConvertJarToDashDocset",
+        "description": "批量自动化转化jar成docset到默认存储位置",
+        "operationId": "batchAutoConvertJarToDashDocset",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/dash/auto-convert-jar-to-dash-docset": {
+      "post": {
+        "tags": [
+          "DashDocsetController"
+        ],
+        "summary": "autoConvertJarToDashDocset",
+        "description": "自动化转化jar成docset到默认存储位置",
+        "operationId": "autoConvertJarToDashDocset",
+        "parameters": [
+          {
+            "name": "jar",
+            "in": "query",
+            "description": "jar的下载链接地址",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {}
+}

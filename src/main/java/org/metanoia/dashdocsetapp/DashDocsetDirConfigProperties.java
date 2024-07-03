@@ -24,12 +24,24 @@ public class DashDocsetDirConfigProperties {
 
 	private final String userDir = SystemProperties.getUserDir();
 
+	/**
+	 * 文档集存储路径
+	 */
 	private String docsetStorePath;
 
+	/**
+	 * WebJar 临时存储路径
+	 */
 	private String webJarTempStorePath;
 
+	/**
+	 * Javadocset 工具路径
+	 */
 	private String javadocsetTool;
 
+	/**
+	 * Zsh 工作目录
+	 */
 	private String zshWorkingDir;
 
 	@Getter
