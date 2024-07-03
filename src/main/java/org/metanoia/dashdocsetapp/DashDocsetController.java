@@ -37,7 +37,9 @@ public class DashDocsetController {
 
 	@Operation(summary = "batchAutoConvertJarToDashDocset", description = "批量自动化转化jar成docset到默认存储位置")
 	@PostMapping("batch-auto-convert-jar-to-dash-docset")
-	public void batchAutoConvertJarToDashDocset(@RequestBody List<String> jars) {
+	public void batchAutoConvertJarToDashDocset(
+			@io.swagger.v3.oas.annotations.parameters.RequestBody(description = "jar的下载链接地址List")
+			@RequestBody List<String> jars) {
 		jars.forEach(dashDocsetService::downloadJarFromWeb);
 	}
 

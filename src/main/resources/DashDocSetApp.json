@@ -1,8 +1,12 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "OpenAPI definition",
-    "version": "v0"
+    "title": "DashDocSetApp",
+    "license": {
+      "name": "Apache License Version 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "version": "v1.0.2"
   },
   "servers": [
     {
@@ -79,6 +83,7 @@
         "description": "批量自动化转化jar成docset到默认存储位置",
         "operationId": "batchAutoConvertJarToDashDocset",
         "requestBody": {
+          "description": "jar的下载链接地址List",
           "content": {
             "application/json": {
               "schema": {
