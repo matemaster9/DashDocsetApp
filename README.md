@@ -89,7 +89,8 @@
 如果你在使用 `DashDocsetApp` 过程中遇到问题或有任何建议，请随时联系我们。
 
 - Email: sylerxu@gmail.com
-- GitHub Issues: [https://github.com/yourusername/DashDocsetApp/issues](https://github.com/yourusername/DashDocsetApp/issues)
+- GitHub
+  Issues: [https://github.com/matemaster9/DashDocsetApp/issues](https://github.com/matemaster9/DashDocsetApp/issues)
 
 ### 授权许可
 
